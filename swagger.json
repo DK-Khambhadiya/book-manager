@@ -1,0 +1,1970 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "Ocean inventory System Copy",
+        "contact": {}
+    },
+    "host": "localhost:3000",
+    "basePath": "/admin",
+    "securityDefinitions": {},
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/admin/categoryList": {
+            "get": {
+                "summary": "Admin Category List",
+                "tags": [
+                    "Admin Category"
+                ],
+                "operationId": "AdminCategoryList",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/addCategory": {
+            "post": {
+                "summary": "Admin Add Category",
+                "tags": [
+                    "Admin Category"
+                ],
+                "operationId": "AdminAddCategory",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminAddCategoryRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/categoryUpdate/5f88d74a466aa70474be7de0": {
+            "put": {
+                "summary": "Admin Category Update",
+                "tags": [
+                    "Admin Category"
+                ],
+                "operationId": "AdminCategoryUpdate",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminCategoryUpdateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/addCompanyBranch": {
+            "post": {
+                "summary": "Admin Add Company Branch",
+                "tags": [
+                    "Admin Branches"
+                ],
+                "operationId": "AdminAddCompanyBranch",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminAddCompanyBranchRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/branchList": {
+            "get": {
+                "description": "send Bearer Authorization Token",
+                "summary": "Admin BranchList",
+                "tags": [
+                    "Admin Branches"
+                ],
+                "operationId": "AdminBranchList",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/removeCompanyBranch/5f8a9f95a413a61a9c100dac": {
+            "delete": {
+                "summary": "Admin Remove Branch",
+                "tags": [
+                    "Admin Branches"
+                ],
+                "operationId": "AdminRemoveBranch",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/updateCompanyBranch/5f8ae00ce587917f54e8c5ef": {
+            "put": {
+                "summary": "Admin Update Company Branch",
+                "tags": [
+                    "Admin Branches"
+                ],
+                "operationId": "AdminUpdateCompanyBranch",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminUpdateCompanyBranchRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/addProduct": {
+            "post": {
+                "summary": "Admin Add Product",
+                "tags": [
+                    "Admin Product"
+                ],
+                "operationId": "AdminAddProduct",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminAddProductRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/productList": {
+            "get": {
+                "summary": "Admin Product List",
+                "tags": [
+                    "Admin Product"
+                ],
+                "operationId": "AdminProductList",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/productUpdate/5f8d76c86077980a54309ecb": {
+            "put": {
+                "summary": "Admin Product Update",
+                "tags": [
+                    "Admin Product"
+                ],
+                "operationId": "AdminProductUpdate",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminProductUpdateRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/deleteProduct/5f8d79966077980a54309ed0": {
+            "delete": {
+                "summary": "Admin Delete Product",
+                "tags": [
+                    "Admin Product"
+                ],
+                "operationId": "AdminDeleteProduct",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/AppUsers": {
+            "get": {
+                "summary": "Admin App Users",
+                "tags": [
+                    "Admin App Users"
+                ],
+                "operationId": "AdminAppUsers",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/SubAdmins": {
+            "get": {
+                "summary": "Find Sub Admin",
+                "tags": [
+                    "SuperAdmin"
+                ],
+                "operationId": "FindSubAdmin",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/contactUs": {
+            "get": {
+                "description": "User level : in Application Contact Us section",
+                "summary": "Contact Us API",
+                "tags": [
+                    "ContactUs"
+                ],
+                "operationId": "ContactUsAPI",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/auth/login": {
+            "post": {
+                "summary": "Login",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "Login",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": {
+                        "$ref": "#/definitions/LoginRequest"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/company": {
+            "post": {
+                "summary": "Add Company",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AddCompany",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AddCompanyRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            },
+            "get": {
+                "summary": "Company List",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "CompanyList",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/product": {
+            "post": {
+                "summary": "Save Product",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "SaveProduct",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/SaveProductRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            },
+            "get": {
+                "summary": "Product List",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "ProductList",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/userList": {
+            "get": {
+                "summary": "User's Lists for Admin",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "User'sListsforAdmin",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/product/category": {
+            "get": {
+                "summary": "Category List",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "CategoryList",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            },
+            "post": {
+                "summary": "Save Category",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "SaveCategory",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/SaveCategoryRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/user/dashboard": {
+            "get": {
+                "summary": "User Dashboard",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "UserDashboard",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/user/profile": {
+            "get": {
+                "summary": "User Profile",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "UserProfile",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            },
+            "post": {
+                "summary": "Update User Profile",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "UpdateUserProfile",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UpdateUserProfileRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/company/branches": {
+            "post": {
+                "summary": "Add Company Branch",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AddCompanyBranch",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AddCompanyBranchRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/product/update/5f7c4823a822b65c77a587c8": {
+            "put": {
+                "summary": "Update Product",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "UpdateProduct",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UpdateProductRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/user/notifications": {
+            "get": {
+                "summary": "Notification List",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "NotificationList",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/product/detail/5f7c1b81b97d344182b93aa6": {
+            "get": {
+                "summary": "Product Detail",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "ProductDetail",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/product/add/stock/5f7c4823a822b65c77a587c8": {
+            "put": {
+                "summary": "Add Stock",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AddStock",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AddStockRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/product/remove/stock/5f7c4823a822b65c77a587c8": {
+            "put": {
+                "summary": "Remove Stock",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "RemoveStock",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/RemoveStockRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/addUser": {
+            "post": {
+                "summary": "Admin Add User",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminAddUser",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": {
+                        "$ref": "#/definitions/AdminAddUserRequest"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/admin/login": {
+            "post": {
+                "summary": "Admin Login",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminLogin",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Body",
+                    "in": "body",
+                    "required": true,
+                    "description": "",
+                    "schema": {
+                        "$ref": "#/definitions/AdminLoginRequest"
+                    }
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                },
+                "security": []
+            }
+        },
+        "/admin/updateUser/5f8ab449634cdf2f8c876793": {
+            "put": {
+                "description": "pass the ID in parameters.",
+                "summary": "Admin update User",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminupdateUser",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminupdateUserRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/addCompany": {
+            "post": {
+                "summary": "Admin Add Company",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminAddCompany",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminAddCompanyRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/companyList": {
+            "get": {
+                "summary": "Admin Company Lists",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminCompanyLists",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/companyDetails": {
+            "get": {
+                "summary": "Admin Company Details",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminCompanyDetails",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                    "name": "Authorization",
+                    "in": "header",
+                    "required": false,
+                    "default": "Bearer {token}",
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/updateCompany": {
+            "put": {
+                "description": "This will update the Company Details",
+                "summary": "Admin Update Company",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminUpdateCompany",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminUpdateCompanyRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/addStock/5f8ae1bde587917f54e8c5f1": {
+            "put": {
+                "summary": "Admin add Stock",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminaddStock",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminaddStockRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/admin/removeStock/5f8ae1bde587917f54e8c5f1": {
+            "put": {
+                "summary": "Admin Remove Stock",
+                "tags": [
+                    "Misc"
+                ],
+                "operationId": "AdminRemoveStock",
+                "deprecated": false,
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [{
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": false,
+                        "default": "Bearer {token}",
+                        "type": "string"
+                    },
+                    {
+                        "name": "Body",
+                        "in": "body",
+                        "required": true,
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/AdminRemoveStockRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "AdminAddCategoryRequest": {
+            "title": "AdminAddCategoryRequest",
+            "example": {
+                "name": "home & kitchen"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "AdminCategoryUpdateRequest": {
+            "title": "AdminCategoryUpdateRequest",
+            "example": {
+                "name": "Home & Kitchen Products"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ]
+        },
+        "AdminAddCompanyBranchRequest": {
+            "title": "AdminAddCompanyBranchRequest",
+            "example": {
+                "company_id": "5f8d4b3a7fafd01be460f9f8",
+                "name": "Yogichowk",
+                "address": "Basement, Silver Business Hub, near Bapa Sitaram Chowk, Yogi Chowk, 395006",
+                "mapLocation": "https://goo.gl/maps/kKetwgvh6MyWakE2A",
+                "phoneNumbers": [
+                    9725105772,
+                    8140957306
+                ]
+            },
+            "type": "object",
+            "properties": {
+                "company_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "mapLocation": {
+                    "type": "string"
+                },
+                "phoneNumbers": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                }
+            },
+            "required": [
+                "company_id",
+                "name",
+                "address",
+                "mapLocation",
+                "phoneNumbers"
+            ]
+        },
+        "AdminUpdateCompanyBranchRequest": {
+            "title": "AdminUpdateCompanyBranchRequest",
+            "example": {
+                "address": "58, Gound Floor,  Mohan Wadi, behind katargam fire station, katargam, Surat, 305004",
+                "mapLocation": "https://goo.gl/maps/tgV8n8zNp4LDqHgB8",
+                "phoneNumbers": [
+                    "9725105772",
+                    "8140957306"
+                ]
+            },
+            "type": "object",
+            "properties": {
+                "address": {
+                    "type": "string"
+                },
+                "mapLocation": {
+                    "type": "string"
+                },
+                "phoneNumbers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            },
+            "required": [
+                "address",
+                "mapLocation",
+                "phoneNumbers"
+            ]
+        },
+        "AdminAddProductRequest": {
+            "title": "AdminAddProductRequest",
+            "example": {
+                "name": "Rubber Hand gloves",
+                "images": [
+                    "https://homepages.cae.wisc.edu/~ece533/images/airplane.png",
+                    "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png",
+                    "https://homepages.cae.wisc.edu/~ece533/images/baboon.png",
+                    "https://homepages.cae.wisc.edu/~ece533/images/barbara.bmp"
+                ],
+                "category_id": "5f8ae02ee587917f54e8c5f0",
+                "company_id": "5f8adf2ce587917f54e8c5ec",
+                "price": 3000,
+                "sku": "rubber_hand_gloves",
+                "cartoon_capicity": 25,
+                "stock": 100,
+                "country": "India",
+                "description": "<div class='a-section a-spacing-none vnv-container'><div class='a-section vnv-text'>This is a <strong>Vegetarian</strong> product.</div></div><ul class='a-unordered-list a-vertical a-spacing-mini'><li><span class='a-list-item'>&nbsp;100% Raw,Pure,ExtraVirgin,Vegan,Unrefined,Unfiltered,Unbleached. Goodness for the Earth and Goodness for You.&nbsp;</span></li><li><span class='a-list-item'>&nbsp;Our oil is Cold-Pressed which means the process uses absolutely No Heat at any stage(classed as RAW food) to retain its Virginity,the Natural aroma,Vital Nutrients and its Composition. The oil is produced from the Milk of Freshly Shredded and First-pressed Coconut Meat of Hand selected Mature Coconuts.&nbsp;</span></li><li><span class='a-list-item'>&nbsp;Hathmic Raw Extra Virgin Coconut oil is a natural replacement for all processed oils and butter. No Additives / Preservatives.Zero Transfat/Zero Cholestrol/Zero Lactose/Zero Gluten&nbsp;</span></li><li><span class='a-list-item'>&nbsp;Hathmic Raw Extra Virgin Coconut oil is a natural replacement for all processed oils and butter. No Additives / Preservatives.Zero Transfat/Zero Cholestrol/Zero Lactose/Zero Gluten&nbsp;</span></li><li><span class='a-list-item'>&nbsp;Very high in MCT&apos;s and Lauric Acid(more than 50%) .Can be used for Internal Consumption &amp; External Application .MULTIPURPOSE COCONUT OIL - Hathmic Coconut Oil can be used for various purposes such as COOKING,DIETARY, BEAUTY, SKIN &amp; HAIR CARE,MOM &amp; BABYCARE,CLEANING, SHAVING, MAKEUP REMOVER, BODY MOISTURISER, PET CARE and MORE&nbsp;</span></li></ul>",
+                "branch_id": "5f8ae00ce587917f54e8c5ef"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "category_id": {
+                    "type": "string"
+                },
+                "company_id": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "sku": {
+                    "type": "string"
+                },
+                "cartoon_capicity": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "branch_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "images",
+                "category_id",
+                "company_id",
+                "price",
+                "sku",
+                "cartoon_capicity",
+                "stock",
+                "country",
+                "description",
+                "branch_id"
+            ]
+        },
+        "AdminProductUpdateRequest": {
+            "title": "AdminProductUpdateRequest",
+            "example": {
+                "name": "Ruber gloves",
+                "images": [],
+                "category_id": "5f8d75ed37b6d43d60e8c5aa",
+                "price": 3000,
+                "cartoon_capicity": 15,
+                "stock": 100,
+                "country": "India",
+                "description": "<html></html>",
+                "branch_id": "5f8d75a037b6d43d60e8c5a9"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "category_id": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "cartoon_capicity": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "branch_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "images",
+                "category_id",
+                "price",
+                "cartoon_capicity",
+                "stock",
+                "country",
+                "description",
+                "branch_id"
+            ]
+        },
+        "LoginRequest": {
+            "title": "LoginRequest",
+            "example": {
+                "phone": "8141654578",
+                "unique_id": 1
+            },
+            "type": "object",
+            "properties": {
+                "phone": {
+                    "type": "string"
+                },
+                "unique_id": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "phone",
+                "unique_id"
+            ]
+        },
+        "AddCompanyRequest": {
+            "title": "AddCompanyRequest",
+            "example": {
+                "name": "Ocean Enterprise",
+                "unique_id": 3
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "unique_id": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "name",
+                "unique_id"
+            ]
+        },
+        "SaveProductRequest": {
+            "title": "SaveProductRequest",
+            "example": {
+                "name": "Cat 1 Product",
+                "images": [],
+                "category_id": "5f757387c60e4b369cf9c1b7",
+                "company_id": "5f7bfcd19631262ed3714794",
+                "price": 300,
+                "cartoon_capicity": 10,
+                "stock": 10,
+                "country": "India",
+                "description": "<html></html>",
+                "branch_id": "5f7bfd269631262ed3714795"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "category_id": {
+                    "type": "string"
+                },
+                "company_id": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "cartoon_capicity": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "branch_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "images",
+                "category_id",
+                "company_id",
+                "price",
+                "cartoon_capicity",
+                "stock",
+                "country",
+                "description",
+                "branch_id"
+            ]
+        },
+        "SaveCategoryRequest": {
+            "title": "SaveCategoryRequest",
+            "example": {
+                "name": "Category 2",
+                "company_id": "5f7465150deb7677cef6e1ce"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "company_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "company_id"
+            ]
+        },
+        "AddCompanyBranchRequest": {
+            "title": "AddCompanyBranchRequest",
+            "example": {
+                "name": "Katargam",
+                "company_id": "5f89779f3b49fe049c9374bb"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "company_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "company_id"
+            ]
+        },
+        "UpdateUserProfileRequest": {
+            "title": "UpdateUserProfileRequest",
+            "example": {
+                "email": "abhi@gmail.com",
+                "city": "Surat",
+                "phone": "8000456532",
+                "full_name": "Abhi Goyani",
+                "business_name": "JKV",
+                "branch_id": "5f8a8bc9fa2b3e2b60e26182",
+                "company_id": "5f8a8113238c7b313cc92936"
+            },
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "city": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "business_name": {
+                    "type": "string"
+                },
+                "branch_id": {
+                    "type": "string"
+                },
+                "company_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "city",
+                "phone",
+                "full_name",
+                "business_name",
+                "branch_id",
+                "company_id"
+            ]
+        },
+        "UpdateProductRequest": {
+            "title": "UpdateProductRequest",
+            "example": {
+                "name": "Cat 1 Product",
+                "images": [],
+                "category_id": "5f757387c60e4b369cf9c1b7",
+                "company_id": "5f7bfcd19631262ed3714794",
+                "price": 300,
+                "cartoon_capicity": 10,
+                "stock": 0,
+                "country": "India",
+                "description": "<html></html>",
+                "branch_id": "5f7bfd269631262ed3714795"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "category_id": {
+                    "type": "string"
+                },
+                "company_id": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "cartoon_capicity": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "branch_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "images",
+                "category_id",
+                "company_id",
+                "price",
+                "cartoon_capicity",
+                "stock",
+                "country",
+                "description",
+                "branch_id"
+            ]
+        },
+        "AddStockRequest": {
+            "title": "AddStockRequest",
+            "example": {
+                "stock": 1
+            },
+            "type": "object",
+            "properties": {
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "stock"
+            ]
+        },
+        "RemoveStockRequest": {
+            "title": "RemoveStockRequest",
+            "example": {
+                "stock": 5
+            },
+            "type": "object",
+            "properties": {
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "stock"
+            ]
+        },
+        "AdminAddUserRequest": {
+            "title": "AdminAddUserRequest",
+            "example": {
+                "fullname": "Ocean",
+                "email": "ocean@gmail.com",
+                "password": "admin@123",
+                "role": "subadmin",
+                "company_id": "5f8adf2ce587917f54e8c5ec",
+                "status": "active"
+            },
+            "type": "object",
+            "properties": {
+                "fullname": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "company_id": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "fullname",
+                "email",
+                "password",
+                "role",
+                "company_id",
+                "status"
+            ]
+        },
+        "AdminLoginRequest": {
+            "title": "AdminLoginRequest",
+            "example": {
+                "email": "ocean@gmail.com",
+                "password": "admin@123"
+            },
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "password"
+            ]
+        },
+        "AdminupdateUserRequest": {
+            "title": "AdminupdateUserRequest",
+            "example": {
+                "email": "kevalvavaliya@gmail.com",
+                "phone": "8141654578",
+                "business_name": "Keval Store"
+            },
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "business_name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "email",
+                "phone",
+                "business_name"
+            ]
+        },
+        "AdminAddCompanyRequest": {
+            "title": "AdminAddCompanyRequest",
+            "example": {
+                "name": "Ocean Enterprise",
+                "unique_id": "2"
+            },
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "unique_id": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "unique_id"
+            ]
+        },
+        "AdminUpdateCompanyRequest": {
+            "title": "AdminUpdateCompanyRequest",
+            "example": {
+                "_id": "5f89861998dd1b25d82c4d72",
+                "name": "Night Owls On form Mission",
+                "company_logo": "Owls"
+            },
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "company_logo": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "_id",
+                "name",
+                "company_logo"
+            ]
+        },
+        "AdminaddStockRequest": {
+            "title": "AdminaddStockRequest",
+            "example": {
+                "stock": 105
+            },
+            "type": "object",
+            "properties": {
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "stock"
+            ]
+        },
+        "AdminRemoveStockRequest": {
+            "title": "AdminRemoveStockRequest",
+            "example": {
+                "stock": 7
+            },
+            "type": "object",
+            "properties": {
+                "stock": {
+                    "type": "integer",
+                    "format": "int32"
+                }
+            },
+            "required": [
+                "stock"
+            ]
+        }
+    },
+    "tags": [{
+            "name": "Admin Category"
+        },
+        {
+            "name": "Admin Branches"
+        },
+        {
+            "name": "Admin Product"
+        },
+        {
+            "name": "Admin App Users"
+        },
+        {
+            "name": "SuperAdmin"
+        },
+        {
+            "name": "ContactUs"
+        },
+        {
+            "name": "Misc",
+            "description": ""
+        }
+    ]
+}
