@@ -13,6 +13,6 @@ jobs:
             - name: "Greet the contributor"
               uses: DK-Khambhadiya/welcomify-me@v0.1
               with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ secrets.ACTION_TOKEN }}
                   issue-message: "Hello there, thanks for opening your first issue. We welcome you to the Project!"
                   pr-message: "Hello there, thanks for opening your first Pull Request. Someone will review it soon."
